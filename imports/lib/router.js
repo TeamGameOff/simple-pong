@@ -4,9 +4,9 @@ FlowRouter.route('/', {
     }
 });
 
-FlowRouter.route('/tasks', {
+FlowRouter.route('/benchmark', {
     action: function(params, queryParams) {
-        BlazeLayout.render('tasks');
+        BlazeLayout.render('benchmark');
     }
 });
 

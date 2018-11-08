@@ -1,0 +1,24 @@
+<template name="benchmark">
+  <h1>BENCHMARK (Meteor.methods)</h1>
+  <p>
+    <button id="bench1k" class="button">1k</button>
+    &nbsp;
+    <button id="bench10k" class="button">10k</button>
+    &nbsp;
+    <button id="bench100k" class="button">100k</button>
+  </p>
+  <h1>BENCHMARK (socket.io.emit)</h1>
+  <p>
+    <button id="sockets_bench1k" class="button">1k</button>
+    &nbsp;
+    <button id="sockets_bench10k" class="button">10k</button>
+    &nbsp;
+    <button id="sockets_bench100k" class="button">100k</button>
+  </p>
+  <p>
+    Player 1 position:
+    <strong>
+      {{states.player1}}
+    </strong>
+  </p>
+</template>

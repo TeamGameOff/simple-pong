@@ -8,3 +8,18 @@ DDP and others:
 
   Meteor Streams
   Forum IoT Stream -> check OMEGA package (end of thread)
+
+
+Resources:
+
+  https://github.com/zeit/next.js/
+
+
+WARNINGS:
+
+  - Bei Connect - wie wird das Disconnect sichergestellt, also wie viele Verbindungen bleiben ggf bestehen
+  - Authentifizierung
+  - Sinnvolle EMIT
+  - Prüfen Benchmark
+
+
