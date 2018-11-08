@@ -1,0 +1,1 @@
+actionStates = new Meteor.Collection("action_states");

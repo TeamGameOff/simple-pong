@@ -1,0 +1,10 @@
+Socket.io:
+
+  https://github.com/Akryum/meteor-socket-io
+  https://atmospherejs.com/joncursi/socket-io-client
+  https://socket.io/
+
+DDP and others:
+
+  Meteor Streams
+  Forum IoT Stream -> check OMEGA package (end of thread)
