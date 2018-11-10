@@ -1,3 +1,5 @@
 # simple-pong tech stack demo
 
-Schnelle Benchmarks
+Einfaches Spiel ... verschiebe den gelben Kasten
+
+Neustart per Reload!

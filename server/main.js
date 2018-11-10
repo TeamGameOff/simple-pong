@@ -23,9 +23,9 @@ Meteor.startup(() => {
 
     socket.on('player1', function(value){
       if (value > 0) {
-        action_states.data.player1++;
-      } else {
         action_states.data.player1--;
+      } else {
+        action_states.data.player1++;
       }
       action_states.update();
     });
@@ -42,7 +42,7 @@ Meteor.startup(() => {
 
   // Start server
   try {
-    server.listen(SOCKET_PORT);
+    server.listen(SOCKET_PORT, 'localhost');
   } catch (e) {
     console.error(e);
   }
@@ -50,6 +50,11 @@ Meteor.startup(() => {
 });
 
 Meteor.methods({
+  'reset_action_states'() {
+    action_states.data.player1 = 0;
+    action_states.data.player2 = 0;
+    action_states.update();
+  },
   'send_updates'() {
     action_states.update();
   },
@@ -60,19 +65,19 @@ Meteor.methods({
     action_states.data.player1--;
   },
   'player1.upwards'() {
-    action_states.data.player1++;
-    action_states.update();
-  },
-  'player1.downwards'() {
     action_states.data.player1--;
     action_states.update();
   },
+  'player1.downwards'() {
+    action_states.data.player1++;
+    action_states.update();
+  },
   'player2.upwards'() {
-    action_states.data.player2++;
+    action_states.data.player2--;
     action_states.update();
   },
   'player2.downwards'() {
-    action_states.data.player2--;
+    action_states.data.player2++;
     action_states.update();
   },
 });
