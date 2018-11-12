@@ -4,7 +4,7 @@ import './action_states';
 
 Meteor.startup(() => {
   // code to run on server at startup
-  console.log('Hallo Server');
+  console.log('Hallo Server!');
 });
 
 Meteor.methods({
