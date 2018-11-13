@@ -10,6 +10,13 @@ Template.player1.onCreated(function() {
   this.states = function() {
     return actionStates.findOne();
   }
+
+
+
+  this.lucas = 'mit justus';
+
+
+
 });
 
 Template.player1.onRendered(function() {
@@ -21,6 +28,12 @@ Template.player1.onRendered(function() {
 
 Template.player1.helpers({
   states: function() {
+
+
+    console.log(Template.instance().lucas);
+
+
+
     return Template.instance().states();
   }
 });

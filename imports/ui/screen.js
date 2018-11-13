@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+import { Game } from '../lib/game.js';
 
 import './screen.html';
 
@@ -17,6 +18,9 @@ Template.screen.onRendered(function() {
     // get reactive values from subscription
     var states = actionStates.findOne();
   });
+
+  var game = new Game(document.getElementsByTagName('canvas')[0], 600, 300); // create an instance of the game
+  game.play(); // start it
 });
 
 Template.screen.helpers({
