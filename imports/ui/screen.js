@@ -34,7 +34,7 @@ Template.screen.onRendered(function() {
   // if data is received
   if (states != undefined) {
     // move squares according to player values
-    game._player._y = -(states.player1 * game._player._speed);
+    game._player1._y = -(states.player1 * game._player1._speed);
     game._player2._y = -(states.player2 * game._player2._speed);
   }
 });

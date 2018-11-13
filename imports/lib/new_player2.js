@@ -1,7 +1,5 @@
 var ARROW_MAP = {
-    //37: 'left',
     40: 'up',
-    //39: 'right',
     38: 'down'
 };
 
@@ -10,9 +8,9 @@ class Player2 {
         this._ctx = ctx;
         this._width = width;
         this._height = height;
-        this._x = 595 - this._width;
+        this._x = 600 - 16 - this._width;
         this._y = 0;
-        this._speed = 5; //set default player speed
+        this._speed = 12; //set default player speed
         document.addEventListener('keydown', this.keydown.bind(this)) //
     }
 
@@ -35,15 +33,12 @@ class Player2 {
     keydown(e) {
         let arrow = ARROW_MAP[e.keyCode];
 
-        /*if (arrow === 'left') {
-            this._x -= this._speed;
-        }
-        if (arrow === 'right') {
-            this._x += this._speed;
-        }*/
+        // moves player up
         if (arrow === 'up') {
             this._y += this._speed;
         }
+
+        // moves player down
         if (arrow === 'down') {
             this._y -= this._speed;
         }
