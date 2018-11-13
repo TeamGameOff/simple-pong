@@ -14,6 +14,14 @@ body {
   font-size: 14px;
 }
 
+h2 {
+    color: #FF0000;
+  }
+
+.green {
+    color: #00FF00;
+}
+
 .button {
     background-color: #4CAF50; /* Green */
     border: none;

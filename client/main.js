@@ -1,3 +1,4 @@
+console.log ('Hallo Client');
 import '../imports/lib/router.js';
 import '../imports/lib/action_states.js';
 import '../imports/ui/start.js';
