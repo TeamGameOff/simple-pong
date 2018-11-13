@@ -1,6 +1,6 @@
 var ARROW_MAP = {
-    40: 'up',
-    38: 'down'
+    83: 'up',
+    87: 'down'
 };
 
 class Player1 {

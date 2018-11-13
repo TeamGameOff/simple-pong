@@ -1,6 +1,6 @@
 var ARROW_MAP = {
-    37: 'left',
-    39: 'right'
+    40: 'up',
+    38: 'down'
 };
 
 class Player2 {
@@ -33,11 +33,11 @@ class Player2 {
     keydown(e) {
         let arrow = ARROW_MAP[e.keyCode];
 
-        if (arrow === 'left') {
-            this._x -= this._speed;
+        if (arrow === 'up') {
+            this._y += this._speed;
         }
-        if (arrow === 'right') {
-            this._x += this._speed;
+        if (arrow === 'down') {
+            this._y -= this._speed;
         }
     }
 }

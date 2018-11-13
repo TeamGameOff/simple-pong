@@ -21,34 +21,34 @@ class Game {
         this._player1.draw(); // update player1 on each tick
         this._player2.draw(); // update player2 on each tick
 
-        // if (this._checkState()) { // check game status : run other tick if player doesn't lose =)
-        //     requestAnimationFrame(this.play.bind(this)); // run play again ~60 times per sec
-        // } else {
-        //     this._playLose();
-        // }
+        if (this._checkState1() && this._checkState2()) { // check game status : run other tick if player doesn't lose =)
+            requestAnimationFrame(this.play.bind(this)); // run play again ~60 times per sec
+        } else {
+            this._playLose();
+        }
     }
 
-    // _checkState1() {
-    //     let borders = this._player1.getBorders();
-    //     return (borders.xMin >= 0 &&
-    //         borders.xMax <= this._width &&
-    //         borders.yMin >= 0 &&
-    //         borders.yMax <= this._height);
-    // }
-    // _checkState2() {
-    //     let borders = this._player2.getBorders();
-    //     return (borders.xMin >= 0 &&
-    //         borders.xMax <= this._width &&
-    //         borders.yMin >= 0 &&
-    //         borders.yMax <= this._height);
-    // }
+    _checkState1() {
+        let borders = this._player1.getBorders();
+        return (borders.xMin >= 0 &&
+            borders.xMax <= this._width &&
+            borders.yMin >= 0 &&
+            borders.yMax <= this._height);
+    }
+    _checkState2() {
+        let borders = this._player2.getBorders();
+        return (borders.xMin >= 0 &&
+            borders.xMax <= this._width &&
+            borders.yMin >= 0 &&
+            borders.yMax <= this._height);
+    }
 
-    // _playLose() {
-    //     this._ctx.beginPath();
-    //     this._ctx.font = '30px arial';
-    //     this._ctx.fillStyle = 'black';
-    //     this._ctx.fillText("You lose!", this._width / 2, this._height / 2);
-    // }
+    _playLose() {
+        this._ctx.beginPath();
+        this._ctx.font = '30px arial';
+        this._ctx.fillStyle = 'black';
+        this._ctx.fillText("You suck!", this._width / 2, this._height / 2);
+    }
 
     _drawBorder() {
         this._ctx.beginPath();
